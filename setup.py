@@ -3,9 +3,17 @@ import setuptools
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
+install_requires=[
+   'matplotlib==3.1.3',
+   'folium==0.12.1',
+   'pandas==1.1.5',
+   'geopandas==0.9.0',
+   'descartes==1.1.0'
+]
+
 setuptools.setup(
     name="gis-tools",
-    version="0.0.1",
+    version="0.0.2",
     author="Alexey Gribko",
     author_email="agribko@sheeva.ai",
     description="Functions for GIS data processing.",
@@ -22,5 +30,6 @@ setuptools.setup(
     ],
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
-    python_requires=">=3.7.5",
+    install_requires=install_requires,
+    python_requires=">=3.7.1",
 )
