@@ -1,4 +1,5 @@
 # general things to ignore
+.gitignore
 build/
 dist/
 *.egg-info/

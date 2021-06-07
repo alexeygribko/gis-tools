@@ -1,5 +1,21 @@
-# gis-tools
+# gis-tools 
+![python](https://img.shields.io/badge/python-3.7.1-green) 
+![license](https://img.shields.io/github/license/alexeygribko/gis-tools)
+
 This package contains some functions and presets for better GIS data processing with Python.
+# Install
+	pip install git+git://github.com/alexeygribko/gis-tools.git
+# Use
+```python
+from gistools.geometry import *
+
+# returns 45.0
+angle(Point(0, 0), Point(1, 1), Point(1, 0))
+
+# returns 'right'
+which_side_line(LineString([(0, 0), (1, 1)]), Point(1, 0))
+
+```
 ## License
 	Copyright (c) 2018 The Python Packaging Authority
 	

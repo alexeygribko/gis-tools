@@ -8,12 +8,14 @@ install_requires=[
    'folium==0.12.1',
    'pandas==1.1.5',
    'geopandas==0.9.0',
-   'descartes==1.1.0'
+   'descartes==1.1.0',
+   'scikit-learn>=0.22.2',
+   'geopy==1.17.0'
 ]
 
 setuptools.setup(
     name="gis-tools",
-    version="0.0.2",
+    version="0.0.3",
     author="Alexey Gribko",
     author_email="agribko@sheeva.ai",
     description="Functions for GIS data processing.",

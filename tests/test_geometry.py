@@ -23,6 +23,13 @@ class TestSimple(unittest.TestCase):
         self.assertEqual(func(*args, **kwargs), answer)
 
     def test_which_side(self):
+        func = which_side
+        # Subtest: 'right'        
+        args = Point(0, 0), Point(1, 1), Point(1, 0)
+        kwargs = dict()
+        answer = 'right'
+        self.assertEqual(func(*args, **kwargs), answer)
+        # Subtest: 'right'
         args = Point(0, 0), Point(1, 1), Point(0, 1)
         kwargs = dict()
         answer = 'left'
@@ -35,7 +42,7 @@ class TestSimple(unittest.TestCase):
         kwargs = dict()
         answer = 'right'
         self.assertEqual(func(*args, **kwargs), answer)
-        # Subtest: 'left'
+        # Subtest: 'right'
         args = LineString([(0, 0), (1, 1)]), Point(0, 1)
         kwargs = dict()
         answer = 'left'
@@ -43,4 +50,3 @@ class TestSimple(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-    print('OK!')
